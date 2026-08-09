@@ -1970,3 +1970,91 @@ body {
 @media screen and (max-width: 768px)
 
 @media screen and (max-width: 480px)
+
+/* =========================================
+   GALLERY RESPONSIVE DESIGN
+   ========================================= */
+
+/* LAPTOP - 4 PHOTOS IN ONE ROW */
+@media screen and (min-width: 769px) {
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
+        justify-items: center;
+        align-items: start;
+    }
+
+    .gallery-item {
+        width: 100%;
+        text-align: center;
+    }
+
+    .gallery-item img {
+        width: 220px;
+        height: 320px;
+        object-fit: cover;
+        display: block;
+        margin: auto;
+    }
+}
+
+
+/* ANDROID - 3 PHOTOS IN ONE ROW */
+@media screen and (max-width: 768px) {
+
+    .gallery {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 12px !important;
+        width: 100% !important;
+        padding: 10px !important;
+        justify-items: center !important;
+        align-items: start !important;
+    }
+
+    .gallery-item {
+        width: 100% !important;
+        text-align: center !important;
+    }
+
+    .gallery-item img {
+        width: 100% !important;
+        max-width: 110px !important;
+        height: 150px !important;
+        object-fit: cover !important;
+        display: block !important;
+        margin: auto !important;
+    }
+
+    .gallery-item p {
+        font-size: 12px !important;
+        margin-top: 6px !important;
+        line-height: 1.2;
+    }
+}
+
+
+/* SMALL ANDROID */
+@media screen and (max-width: 480px) {
+
+    .gallery {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 8px !important;
+        padding: 6px !important;
+    }
+
+    .gallery-item img {
+        max-width: 95px !important;
+        height: 135px !important;
+    }
+
+    .gallery-item p {
+        font-size: 10px !important;
+    }
+}
+
+grid-template-columns: repeat(4, 1fr);
+
+grid-template-columns: repeat(3, 1fr);
