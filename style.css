@@ -1997,63 +1997,56 @@ body {
 
 }
 
-/* ================================
-   ANDROID MOBILE GALLERY ONLY
-   ================================ */
+/* ============================= */
+/* ANDROID / MOBILE GALLERY ONLY */
+/* ============================= */
+
 @media screen and (max-width: 600px) {
 
-    /* Gallery photo */
+    /* Gallery photo + name full center */
+    .gallery {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .gallery-item {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Photo */
     .gallery-item img {
-        width: 85%;
+        width: 300px;
+        max-width: 85%;
         height: auto;
         display: block;
         margin: 0 auto;
     }
 
-    /* Gallery name */
+    /* Photo name */
     .gallery-item p {
-        width: 70%;
-        margin: 10px auto 20px auto;
-
-        text-align: center;
-
-        font-size: 16px;
-        line-height: 1.4;
-
-        padding: 8px 10px;
-
-        border-radius: 12px;
-        box-sizing: border-box;
-    }
-
-}
-
-@media screen and (max-width: 600px) {
-
-    /* உங்க existing CSS */
-
-/* இதெல்லாம் முடிந்த பிறகு */
-
-
-/* புதிய Android coding */
-@media screen and (max-width: 600px) {
-
-    .gallery-item img {
-        width: 85%;
-        height: auto;
-        display: block;
-        margin: 0 auto;
-    }
-
-    .gallery-item p {
-        width: 70%;
-        margin: 10px auto 20px auto;
+        width: 300px;
+        max-width: 85%;
+        margin: 10px auto 0;
         text-align: center;
         font-size: 16px;
         line-height: 1.4;
         padding: 8px 10px;
-        border-radius: 12px;
         box-sizing: border-box;
     }
-
 }
+
+.gallery-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (max-width: 600px)
+
