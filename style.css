@@ -2051,30 +2051,45 @@ body {
 @media screen and (max-width: 600px)
 
 /* =========================================
-   ANDROID / MOBILE BACKGROUND ONLY
+   ANDROID / MOBILE BODY BACKGROUND
    ========================================= */
 
 @media screen and (max-width: 600px) {
 
+    html {
+        min-height: 100%;
+        background: #000;
+    }
+
     body {
+        margin: 0;
+        min-height: 100vh;
+
+        /* ANDROID BACKGROUND PHOTO */
         background-image:
             linear-gradient(
-                rgba(0, 0, 0, 0.45),
-                rgba(0, 0, 0, 0.45)
+                rgba(0, 0, 0, 0.35),
+                rgba(0, 0, 0, 0.35)
             ),
-            url("TEAM 1.jpeg");
+            url("TEAM\ 1.jpeg");
 
+        /* Full body background */
         background-size: cover;
         background-position: center top;
         background-repeat: no-repeat;
+        background-attachment: scroll;
 
-        /* Background page-oda scroll aagum */
+        /* Scroll with the page */
         background-attachment: scroll;
 
         background-color: #000;
     }
 }
 
-url("team 1.jpeg");
+body {
+    background-image: url("TEAM.jpeg");
+}
 
-@media screen and (max-width: 600px)
+background-size: cover;
+
+background-attachment: scroll;
