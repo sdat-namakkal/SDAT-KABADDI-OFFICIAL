@@ -1972,89 +1972,137 @@ body {
 @media screen and (max-width: 480px)
 
 /* =========================================
-   GALLERY RESPONSIVE DESIGN
+   GALLERY + OUR PHOTOS
+   RESPONSIVE DESIGN
    ========================================= */
 
-/* LAPTOP - 4 PHOTOS IN ONE ROW */
+/* ===== LAPTOP / DESKTOP ===== */
 @media screen and (min-width: 769px) {
 
-    .gallery {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 25px;
-        justify-items: center;
-        align-items: start;
-    }
-
-    .gallery-item {
-        width: 100%;
-        text-align: center;
-    }
-
-    .gallery-item img {
-        width: 220px;
-        height: 320px;
-        object-fit: cover;
-        display: block;
-        margin: auto;
-    }
-}
-
-
-/* ANDROID - 3 PHOTOS IN ONE ROW */
-@media screen and (max-width: 768px) {
-
+    /* GALLERY */
     .gallery {
         display: grid !important;
-        grid-template-columns: repeat(3, 1fr) !important;
-        gap: 12px !important;
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 25px !important;
         width: 100% !important;
-        padding: 10px !important;
         justify-items: center !important;
         align-items: start !important;
     }
 
-    .gallery-item {
+    /* OUR PHOTOS */
+    .our-photos {
+        display: grid !important;
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 25px !important;
         width: 100% !important;
-        text-align: center !important;
+        justify-items: center !important;
+        align-items: start !important;
     }
 
-    .gallery-item img {
-        width: 100% !important;
-        max-width: 110px !important;
-        height: 150px !important;
-        object-fit: cover !important;
-        display: block !important;
-        margin: auto !important;
+    .gallery-item,
+    .our-photos .gallery-item {
+        width: 100%;
+        text-align: center;
     }
 
-    .gallery-item p {
-        font-size: 12px !important;
-        margin-top: 6px !important;
-        line-height: 1.2;
+    .gallery-item img,
+    .our-photos img {
+        width: 220px;
+        height: 320px;
+        object-fit: cover;
+        display: block;
+        margin: 0 auto;
     }
 }
 
 
-/* SMALL ANDROID */
+/* ===== ANDROID / MOBILE ===== */
+@media screen and (max-width: 768px) {
+
+    /* GALLERY - 2 PHOTOS PER ROW */
+    .gallery {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 18px 12px !important;
+        width: 100% !important;
+        padding: 10px !important;
+        margin: 0 auto !important;
+        justify-items: center !important;
+        align-items: start !important;
+    }
+
+    /* OUR PHOTOS - 2 PHOTOS PER ROW */
+    .our-photos {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 18px 12px !important;
+        width: 100% !important;
+        padding: 10px !important;
+        margin: 0 auto !important;
+        justify-items: center !important;
+        align-items: start !important;
+    }
+
+    /* PHOTO ITEMS */
+    .gallery-item,
+    .our-photos .gallery-item {
+        width: 100% !important;
+        max-width: 160px !important;
+        text-align: center !important;
+        margin: 0 auto !important;
+    }
+
+    /* PHOTOS */
+    .gallery-item img,
+    .our-photos img {
+        width: 100% !important;
+        max-width: 150px !important;
+        height: 210px !important;
+        object-fit: cover !important;
+        display: block !important;
+        margin: 0 auto !important;
+        border-radius: 8px !important;
+    }
+
+    /* PHOTO NAME */
+    .gallery-item p,
+    .our-photos p {
+        font-size: 13px !important;
+        line-height: 1.3 !important;
+        margin: 8px 0 0 0 !important;
+        text-align: center !important;
+        word-wrap: break-word !important;
+    }
+}
+
+
+/* ===== SMALL ANDROID PHONES ===== */
 @media screen and (max-width: 480px) {
 
-    .gallery {
-        grid-template-columns: repeat(3, 1fr) !important;
-        gap: 8px !important;
-        padding: 6px !important;
+    .gallery,
+    .our-photos {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 15px 8px !important;
+        padding: 8px !important;
     }
 
-    .gallery-item img {
-        max-width: 95px !important;
-        height: 135px !important;
+    .gallery-item,
+    .our-photos .gallery-item {
+        max-width: 145px !important;
     }
 
-    .gallery-item p {
-        font-size: 10px !important;
+    .gallery-item img,
+    .our-photos img {
+        max-width: 140px !important;
+        height: 190px !important;
+    }
+
+    .gallery-item p,
+    .our-photos p {
+        font-size: 12px !important;
     }
 }
 
 grid-template-columns: repeat(4, 1fr);
 
-grid-template-columns: repeat(3, 1fr);
+grid-template-columns: repeat(2, minmax(0, 1fr));
