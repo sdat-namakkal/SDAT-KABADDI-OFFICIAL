@@ -1996,3 +1996,64 @@ body {
     }
 
 }
+
+/* ================================
+   ANDROID MOBILE GALLERY ONLY
+   ================================ */
+@media screen and (max-width: 600px) {
+
+    /* Gallery photo */
+    .gallery-item img {
+        width: 85%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* Gallery name */
+    .gallery-item p {
+        width: 70%;
+        margin: 10px auto 20px auto;
+
+        text-align: center;
+
+        font-size: 16px;
+        line-height: 1.4;
+
+        padding: 8px 10px;
+
+        border-radius: 12px;
+        box-sizing: border-box;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    /* உங்க existing CSS */
+
+/* இதெல்லாம் முடிந்த பிறகு */
+
+
+/* புதிய Android coding */
+@media screen and (max-width: 600px) {
+
+    .gallery-item img {
+        width: 85%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .gallery-item p {
+        width: 70%;
+        margin: 10px auto 20px auto;
+        text-align: center;
+        font-size: 16px;
+        line-height: 1.4;
+        padding: 8px 10px;
+        border-radius: 12px;
+        box-sizing: border-box;
+    }
+
+}
